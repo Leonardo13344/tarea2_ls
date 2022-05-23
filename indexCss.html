@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es"><!--Raiz, Lang es el idioma español-->
+  <head><!-- Se enlazan los archivos externos que necesita la pagina, como .JS-->
+      <title>AppDeGatos</title>
+      <link href="style.css" rel="stylesheet"> <!-- Hago Referencia al archivo CSS-->
+  </head>
+  <body><!-- Aqui definimos la estructura de la página-->
+    <h1>AppDeGatos</h1><!--De H1 a H6 son encabezados.-->
+    <!-- El Style es CSS en una linea. -->
+    <main><!-- Aqui va todo el contenido principal de nuestra pagina-->
+      <h2>Imagenes de Gatos:</h2>
+      <p>Haz click <a href="https://www.google.com/search?q=imagenes+de+gatos&sxsrf=ALiCzsa4Vf61KduZIAQgCUc4LjEiif_d8g:1651200790410&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiwr8Kkorj3AhXOoWoFHRDQC-cQ_AUoAXoECAEQAw&biw=1366&bih=657&dpr=1" target="_blank" rel="noopener noreferrer">aqui</a> para ver mas imagenes de gatos</p><!--Para Escribir parrafos.-->
+      <!-- El atruibuto target="_blank" abre el enlace en una nueva pagina-->
+      <!--El rel es por seguridad-->
+
+      <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer"><img src="https://bit.ly/fcc-relaxing-cat" alt="Un Michi"></a>
+      <!--Etiqueta para imagenes, el alt es para mostrar un mensaje cuando la imagenes no se carga bien-->
+      
+      <hr> <!--Linea Horizontal.-->
+      <!--Listas Ordenadas-->
+
+      <h3>Listas de Gatos</h3>
+      <div><!-- <div> crea contenedores-->
+        <p>Cosas que los gatos <em>aman</em>:</p>
+        <!--Para texto en cursiva, se utiliza la etiqueta <em>-->
+        <ul class="lista-de-gatos">
+          <li>Menta gatuna</li> <!-- List Item-->
+          <li>Apuntadores Laser</li>
+          <li><s>Lasana</s></li>
+          <!--Para tachar texto, etiqueta <s>-->
+        </ul><!--UnOrder List-->
+
+        <img src="imagenes/lasagna.png" alt="Lasaña"><!--Para imagenes que estan en mi dispositivo.-->
+        <!--Lista Ordenada-->
+
+        <p>Cosas que los gatos <strong>odian</strong>:</p>
+        <!--Texto en negrita utiliza la etiqueta <strong>-->
+        <ol class="lista-de-gatos"><!--Ordered List-->
+          <li>Tratamientos antipulgas</li>
+          <li>Truenos</li>
+          <li>Otros gatos</li>
+        </ol>
+      </div>
+      <img src="imagenes/gatitos.jpg" alt="Gatitos">
+
+      <!--Para Crear Formularios-->
+      <form action="/enviar-respuesta"> <!--El Action indica a donde voy a mandar lo introducido en la pagina.-->
+        <!-- Botones de Radio -->
+        <label for="interior">
+          <input id="interior" 
+            type="radio" 
+            name="interior-exterior" 
+            checked 
+            value="interior">Interior
+        </label>
+        <br>
+        <label for="exterior">
+          <input id="exterior" 
+            type="radio" 
+            name="interior-exterior" 
+            value="exterior">Exterior
+        </label>
+        <!--<label> para poder marcar el circulo dando click en las letras-->
+        <!--name para crear un grupo de botones radio, permite que solo uno se pueda marcar.-->
+        <br>
+
+        <!-- Casillas de Verificacion -->
+        <label for="carinoso">
+          <input type="checkbox" 
+            id="carinoso" 
+            name="personalidad" 
+            checked 
+            value="carinoso"> Carinioso 
+        </label>
+        <br>
+        <label for="perezoso">
+          <input type="checkbox" 
+            id="perezoso" 
+            name="personalidad" 
+            value="perezoso"> Perezoso 
+        </label>
+        <br>
+        <label for="energico">
+          <input type="checkbox" 
+            id="energico" 
+            name="personalidad" 
+            value="energico"> Energico 
+        </label>
+        <br>
+        <!-- El atributo checked es para añadir una opcion marcada por defecto -->
+
+        <!-- Texto y Boton Enviar -->
+        <input type="text" 
+        placeholder="URL de la foto de tu gato" 
+        required> <!--El placeholder sirve para dar una guia al usuario de como tiene que llenar el campo que se le solicita--> <!--El required pone en obligatorio el campo a llenar. -->
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+    <footer>
+      <p><small>Sin Derechos de Autor</small></p>
+    </footer>
+  </body>
+</html>
